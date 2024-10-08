@@ -164,6 +164,8 @@ user_pref("toolkit.coverage.endpoint.base.", "");
 user_pref("browser.ping-centre.telemetry", false);
 user_pref("beacon.enabled", false);
 
+// Firefox 128 PPA garbage
+lockPref("dom.private-attribution.submission.enabled", false);
 
 /*********************************************************************
  * Studies
