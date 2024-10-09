@@ -1,14 +1,14 @@
 //
 /*********************************************************************
 *
-* name: user.js | brainfucksec
-* descr.: Mozilla Firefox configuration file: `user.js`
-* version: 0.20.1
-* date: 2023-10-15
-* url: https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2
-* maintainer: brainf+ck
+* Name: user.js | brainfucksec
+* Descr.: Mozilla Firefox configuration file: `user.js`
+* Version: 0.21.1
+* Date: 2024-07-14
+* URL: https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2
+* Maintainer: brainf+ck
 *
-* info:
+* Info:
 * Set preferences for the selected profile when Firefox start.
 * Copy this file on Firefox Profile folder.  You should create a new profile
 * to be used with this file.
@@ -30,8 +30,7 @@
 * OPTION FORMAT:
 *   user_pref("<entry>", <boolean> || <number> || "<string>");
 *
-*
-* thanks to:
+* Thanks to:
 * arkenfox/user.js: https://github.com/arkenfox/user.js
 * LibreWolf: https://librewolf.net/
 *
@@ -63,7 +62,7 @@
  *    - UI Features
  *    - Extensions
  *    - Shutdown Settings
- *    - Fingerprinting
+ *    - Fingerprinting (RFP)
  *
  *********************************************************************/
 
@@ -71,14 +70,14 @@
  * StartUp Settings
  *********************************************************************/
 
-// disable about:config warning
+// Disable about:config warning
 user_pref("browser.aboutConfig.showWarning", false);
 
-// disable default browser check
+// Disable default browser check
 user_pref("browser.shell.checkDefaultBrowser", false);
 
 /*
- * set startup page:
+ * Set startup home page:
  *    0 = blank
  *    1 = home
  *    2 = last visited page
@@ -114,7 +113,7 @@ user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false); //
 user_pref("geo.provider.use_gpsd", false);              // Linux
 user_pref("geo.provider.use_geoclue", false);           // Linux
 
-// disable region updates
+// Disable region updates
 user_pref("browser.region.network.url", "");
 user_pref("browser.region.update.enabled", false);
 
@@ -123,7 +122,7 @@ user_pref("browser.region.update.enabled", false);
  * Language / Locale
  *********************************************************************/
 
-// set language for displaying web pages:
+// Set language for displaying web pages:
 user_pref("intl.accept_languages", "en-US, en");
 user_pref("javascript.use_us_english_locale", true); // [HIDDEN PREF]
 
@@ -132,11 +131,11 @@ user_pref("javascript.use_us_english_locale", true); // [HIDDEN PREF]
  * Auto-updates / Recommendations
  *********************************************************************/
 
-// disable auto-installing Firefox updates
+// Disable auto-installing Firefox updates
 // user_pref("app.update.background.scheduling.enabled", false); // Windows
 user_pref("app.update.auto", false);                            // Non-Windows
 
-// disable addons recommendations (use Google Analytics)
+// Disable addons recommendations (use Google Analytics)
 user_pref("extensions.getAddons.showPane", false); // [HIDDEN PREF]
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("browser.discovery.enabled", false);
@@ -146,7 +145,7 @@ user_pref("browser.discovery.enabled", false);
  * Telemetry
  *********************************************************************/
 
-// disable telemetry
+// Disable telemetry
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("toolkit.telemetry.enabled", false); // Default: false
@@ -171,10 +170,10 @@ lockPref("dom.private-attribution.submission.enabled", false);
  * Studies
  *********************************************************************/
 
-// disable studies
+// Disable studies
 user_pref("app.shield.optoutstudies.enabled", false);
 
-// disable normandy/shield
+// Disable normandy/shield
 user_pref("app.normandy.enabled", false);
 user_pref("app.normandy.api_url", "");
 
@@ -183,7 +182,7 @@ user_pref("app.normandy.api_url", "");
  * Crash Reports
  *********************************************************************/
 
-// disable crash reports
+// Disable crash reports
 user_pref("breakpad.reportURL", "");
 user_pref("browser.tabs.crashReporting.sendReport", false);
 
@@ -192,11 +191,11 @@ user_pref("browser.tabs.crashReporting.sendReport", false);
  * Captive Portal Detection / Network Checks
  *********************************************************************/
 
-// disable captive portal detection
+// Disable captive portal detection
 user_pref("captivedetect.canonicalURL", "");
 user_pref("network.captive-portal-service.enabled", false);
 
-// disable network connections checks
+// Disable network connections checks
 user_pref("network.connectivity-service.enabled", false);
 
 
@@ -204,30 +203,30 @@ user_pref("network.connectivity-service.enabled", false);
  * Safe Browsing
  *********************************************************************/
 
-// disable safe browsing service
+// Disable safe browsing service
 // user_pref("browser.safebrowsing.malware.enabled", false);
 // user_pref("browser.safebrowsing.phishing.enabled", false);
 
-// disable list of blocked URI
+// Disable list of blocked URI
 // user_pref("browser.safebrowsing.blockedURIs.enabled", false);
 
-// disable fetch of updates
+// Disable fetch of updates
 user_pref("browser.safebrowsing.provider.google4.gethashURL", "");
 user_pref("browser.safebrowsing.provider.google4.updateURL", "");
 user_pref("browser.safebrowsing.provider.google.gethashURL", "");
 user_pref("browser.safebrowsing.provider.google.updateURL", "");
 user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
 
-// disable checks for downloads
+// Disable checks for downloads
 // user_pref("browser.safebrowsing.downloads.enabled", false);
 // user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 // user_pref("browser.safebrowsing.downloads.remote.url", "");
 
-// disable checks for unwanted software
+// Disable checks for unwanted software
 user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
 user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
 
-// disable bypasses the block of safe browsing with a click for current session
+// Disable bypasses the block of safe browsing with a click for current session
 user_pref("browser.safebrowsing.allowOverride", false);
 
 
@@ -235,34 +234,34 @@ user_pref("browser.safebrowsing.allowOverride", false);
  * Network: DNS, Proxy, IPv6
  *********************************************************************/
 
-// disable link prefetching
+// Disable link prefetching
 user_pref("network.prefetch-next", false);
 
-// disable DNS prefetching
+// Disable DNS prefetching
 user_pref("network.dns.disablePrefetch", true);
 
-// disable predictor / prefetching
+// Disable predictor
 user_pref("network.predictor.enabled", false);
 
-// disable link-mouseover opening connection to linked server
+// Disable link-mouseover opening connection to linked server
 user_pref("network.http.speculative-parallel-limit", 0);
 
-// disable mousedown speculative connections on bookmarks and history
+// Disable mousedown speculative connections on bookmarks and history
 user_pref("browser.places.speculativeConnect.enabled", false);
 
-// disable IPv6
+// Disable IPv6
 user_pref("network.dns.disableIPv6", true);
 
-// disable "GIO" protocols as a potential proxy bypass vectors
+// Disable "GIO" protocols as a potential proxy bypass vectors
 user_pref("network.gio.supported-protocols", ""); // [HIDDEN PREF]
 
-// disable using UNC (Uniform Naming Convention) paths (prevent proxy bypass)
+// Disable using UNC (Uniform Naming Convention) paths (prevent proxy bypass)
 user_pref("network.file.disable_unc_paths", true); // [HIDDEN PREF]
 
-// remove special permissions for certain mozilla domains
+// Remove special permissions for certain mozilla domains
 user_pref("permissions.manager.defaultsUrl", "");
 
-// use Punycode in Internationalized Domain Names to eliminate possible spoofing
+// Use Punycode in Internationalized Domain Names to eliminate possible spoofing
 user_pref("network.IDN_show_punycode", true);
 
 
@@ -270,50 +269,54 @@ user_pref("network.IDN_show_punycode", true);
  * Search Bar: Suggestions, Autofill
  *********************************************************************/
 
-// disable search suggestions
+// Disable location bar contextual suggestions:
+user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
+user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
+
+// Disable search suggestions
 // user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.urlbar.suggest.searches", false);
 
+// Disable urlbar trending search suggestions
+user_pref("browser.urlbar.trending.featureGate", false);
 
-// disable location bar domain guessing
+// Disable urlbar suggestions
+user_pref("browser.urlbar.addons.featureGate", false);
+user_pref("browser.urlbar.mdn.featureGate", false);
+user_pref("browser.urlbar.pocket.featureGate", false);
+user_pref("browser.urlbar.weather.featureGate", false);
+
+// Disable location bar domain guessing
 user_pref("browser.fixup.alternate.enabled", false);
 
-// display all parts of the url in the bar
+// Display all parts of the url in the bar
 user_pref("browser.urlbar.trimURLs", false);
 
-// disable location bar making speculative connections
+// Disable location bar making speculative connections
 // user_pref("browser.urlbar.speculativeConnect.enabled", false);
 
-// disable form autofill
+// Disable form autofill
 user_pref("browser.formfill.enable", false); // form history
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.available", "off");
-user_pref("extensions.formautofill.creditCards.available", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
-user_pref("extensions.formautofill.heuristics.enabled", false);
-
-// disable location bar contextual suggestions:
-user_pref("browser.urlbar.quicksuggest.scenario", "history");
-user_pref("browser.urlbar.quicksuggest.enabled", false);
-user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
-user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
 
 
 /*********************************************************************
  * Passwords
  *********************************************************************/
 
-// disable saving passwords
+// Disable saving passwords
 // user_pref("signon.rememberSignons", false);
 
-// disable autofill login and passwords
+// Disable autofill login and passwords
 // user_pref("signon.autofillForms", false);
 
-// disable formless login capture for Password Manager
+// Disable formless login capture for Password Manager
 user_pref("signon.formlessCapture.enabled", false);
 
 /*
- * hardens against potential credentials phishing:
+ * Hardens against potential credentials phishing:
  *    0 = don't allow sub-resources to open HTTP authentication credentials dialogs
  *    1 = don't allow cross-origin sub-resources to open HTTP authentication credentials dialogs
  *    2 = allow sub-resources to open HTTP authentication credentials dialogs (default)
@@ -325,54 +328,59 @@ user_pref("network.auth.subresource-http-auth-allow", 1);
  * Disk Cache / Memory
  *********************************************************************/
 
-// disable disk cache
+// Disable disk cache
 // user_pref("browser.cache.disk.enable", false);
 
+// Disable media cache from writing to disk in Private Browsing
+user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
+user_pref("media.memory_cache_max_size", 65536);
+
 /*
- * disable storing extra session data:
+ * Disable storing extra session data:
  *    0 = everywhere
  *    1 = unencrypted sites
  *    2 = nowhere
  */
 // user_pref("browser.sessionstore.privacy_level", 2);
 
-// disable resuming session from crash
+// Disable resuming session from crash
 // user_pref("browser.sessionstore.resume_from_crash", false);
 
-// disable page thumbnail collection
+// Disable automatic Firefox start and session restore after reboot [Windows]
+// user_pref("toolkit.winRegisterApplicationRestart", false);
+
+// Disable page thumbnail collection
 // user_pref("browser.pagethumbnails.capturing_disabled", true); // [HIDDEN PREF]
 
-// disable favicons in profile folder
-// user_pref("browser.shell.shortcutFavicons", false);
+// Disable favicons in shortcuts [Windows]
+user_pref("browser.shell.shortcutFavicons", false);
 
-// delete temporary files opened with external apps
-// user_pref("browser.helperApps.deleteTempFileOnExit", true);
+// Delete temporary files opened with external apps
+user_pref("browser.download.start_downloads_in_tmp_dir", true);
+user_pref("browser.helperApps.deleteTempFileOnExit", true);
 
 
 /*********************************************************************
- * HTTPS / SSL/TLS / OSCP / CERTS
+ * HTTPS (SSL/TLS, OSC, CERTS)
  *********************************************************************/
 
-// enable HTTPS-Only mode in all windows
+// Enable HTTPS-Only mode in all windows
 user_pref("dom.security.https_only_mode", true);
 
-// disable sending HTTP request for checking HTTPS support by the server
+// Disable sending HTTP request for checking HTTPS support by the server
 user_pref("dom.security.https_only_mode_send_http_background_request", false);
 
-// display advanced information on Insecure Connection warning pages
+// Display advanced information on Insecure Connection warning pages
 user_pref("browser.xul.error_pages.expert_bad_cert", true);
 
-// disable TLS 1.3 0-RTT (round-trip time)
+// Disable TLS 1.3 0-RTT (round-trip time)
 user_pref("security.tls.enable_0rtt_data", false);
 
-// set OCSP to terminate the connection when a CA isn't validate
+// Set OCSP to terminate the connection when a CA isn't validate
 // user_pref("security.OCSP.require", true);
 
-// disable SHA-1 certificates
-user_pref("security.pki.sha1_enforcement_level", 1);
-
 /*
- * enable strict pinning (PKP (Public Key Pinning)):
+ * Enable strict PKP (Public Key Pinning):
  *    0 = disabled
  *    1 = allow user MiTM (i.e. your Antivirus)
  *    2 = strict
@@ -380,11 +388,11 @@ user_pref("security.pki.sha1_enforcement_level", 1);
 user_pref("security.cert_pinning.enforcement_level", 2);
 
 /*
- * enable CRLite
+ * Enable CRLite
  *    0 = disabled
- *    1 = consult CRLite but only collect telemetry (default)
+ *    1 = consult CRLite but only collect telemetry
  *    2 = consult CRLite and enforce both "Revoked" and "Not Revoked" results
- *    3 = consult CRLite and enforce "Not Revoked" results, but defer to OCSP for "Revoked"
+ *    3 = consult CRLite and enforce "Not Revoked" results, but defer to OCSP for "Revoked" (default)
  */
 user_pref("security.remote_settings.crlite_filters.enabled", true);
 user_pref("security.pki.crlite_mode", 2);
@@ -395,7 +403,7 @@ user_pref("security.pki.crlite_mode", 2);
  *********************************************************************/
 
 /*
- * control when to send a referer:
+ * Control when to send a referer:
  *    0 = always (default)
  *    1 = only if base domains match
  *    2 = only if hosts match
@@ -403,7 +411,7 @@ user_pref("security.pki.crlite_mode", 2);
 user_pref("network.http.referer.XOriginPolicy", 2);
 
 /*
- * control amount of information to send:
+ * Control amount of information to send:
  *    0 = send full URI (default):  https://example.com:8888/foo/bar.html?id=1234
  *    1 = scheme+host+port+path:    https://example.com:8888/foo/bar.html
  *    2 = scheme+host+port:         https://example.com:8888
@@ -415,31 +423,22 @@ user_pref("network.http.referer.XOriginTrimmingPolicy", 1);
  * Audio/Video: WebRTC, WebGL
  *********************************************************************/
 
-// disable WebRTC
+// Disable WebRTC
 user_pref("media.peerconnection.enabled", false);
 
-// force WebRTC inside the proxy
+// Force WebRTC inside the proxy
 user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
 
-// force a single network interface for ICE candidates generation
+// Force a single network interface for ICE candidates generation
 user_pref("media.peerconnection.ice.default_address_only", true);
 
-// force exclusion of private IPs from ICE candidates
+// Force exclusion of private IPs from ICE candidates
 user_pref("media.peerconnection.ice.no_host", true);
 
-// disable WebGL (Web Graphics Library):
+// Disable WebGL (Web Graphics Library):
 user_pref("webgl.disabled", true);
 
-/*
- * disable autoplay of HTML5 media, You can set exceptions under site
- * permissions.
- *    0 = allow all
- *    1 = block non-muted media (default)
- *    5 = block all
- */
-user_pref("media.autoplay.default", 5);
-
-// disable DRM Content
+// Disable DRM Content
 user_pref("media.eme.enabled", false);
 
 
@@ -447,10 +446,10 @@ user_pref("media.eme.enabled", false);
  * Downloads
  *********************************************************************/
 
-// always ask you where to save files:
+// Always ask you where to save files:
 user_pref("browser.download.useDownloadDir", false);
 
-// disable adding downloads to system's "recent documents" list
+// Disable adding downloads to system's "recent documents" list
 user_pref("browser.download.manager.addToRecentDocs", false);
 
 // instead of asking for dialog for new file type, just save
@@ -467,39 +466,32 @@ user_pref("browser.download.start_downloads_in_tmp_dir", true);
  *********************************************************************/
 
 /*
- * enable ETP (Enhanced Tracking Protection)
+ * Enable ETP (Enhanced Tracking Protection)
  * ETP strict mode enables Total Cookie Protection (TCP)
  */
 user_pref("browser.contentblocking.category", "strict");
-
-// enable state partitioning of service workers
-user_pref("privacy.partition.serviceWorkers", true); // Default: true
-
-// enable APS (Always Partitioning Storage)
-user_pref("privacy.partition.always_partition_third_party_non_cookie_storage", true);
-user_pref("privacy.partition.always_partition_third_party_non_cookie_storage.exempt_sessionstorage", false);
 
 
 /*********************************************************************
  * UI Features
  *********************************************************************/
 
-// block popup windows
+// Block popup windows
 user_pref("dom.disable_open_during_load", true);
 
-// limit events that can cause a popup
+// Limit events that can cause a popup
 user_pref("dom.popup_allowed_events", "click dblclick mousedown pointerdown");
 
-// disable Pocket extension
+// Disable Pocket extension
 user_pref("extensions.pocket.enabled", false);
 
-// disable Screenshots extension
+// Disable Screenshots extension
 // user_pref("extensions.screenshots.disabled", true);
 
-// disable PDFJS scripting
+// Disable PDFJS scripting
 user_pref("pdfjs.enableScripting", false);
 
-// enable Containers and show the UI settings
+// Enable Containers and show the UI settings
 user_pref("privacy.userContext.enabled", true);
 user_pref("privacy.userContext.ui.enabled", true);
 
@@ -509,7 +501,7 @@ user_pref("privacy.userContext.ui.enabled", true);
  *********************************************************************/
 
 /*
- * extensions are allowed to work on restricted domains, while their scope
+ * Set extensions to work on restricted domains, and their scope
  * is set to profile+applications.
  * See: https://mike.kaply.com/2012/02/21/understanding-add-on-scopes/
  */
@@ -524,7 +516,7 @@ user_pref("extensions.postDownloadThirdPartyPrompt", false);
  * Shutdown Settings
  *********************************************************************/
 
-// clear history when Firefox closes
+// Clear history, cookies and site data when Firefox closes
 // user_pref("network.cookie.lifetimePolicy", 2);
 // user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 // user_pref("privacy.clearOnShutdown.cache", true);
@@ -539,13 +531,13 @@ user_pref("extensions.postDownloadThirdPartyPrompt", false);
 
 
 /*********************************************************************
- * Fingerprinting
+ * Fingerprinting (RFP)
  *********************************************************************/
 
 /*
  * RFP (Resist Fingerprinting):
  *
- * can cause some website breakage: mainly canvas, use a site
+ * Can cause some website breakage: mainly canvas, use a site
  * exception via the urlbar.
  *
  * RFP also has a few side effects: mainly timezone is UTC0, and
@@ -554,23 +546,25 @@ user_pref("extensions.postDownloadThirdPartyPrompt", false);
  *
  * See: https://support.mozilla.org/en-US/kb/firefox-protection-against-fingerprinting
  */
+
+// Enable RFP
 user_pref("privacy.resistFingerprinting", true);
 // user_pref("privacy.resistFingerprinting.letterbox", true);
 
-// set new window size rounding max values
-pref("privacy.window.InnerWidth", 1600);
-pref("privacy.window.InnerHeight", 900);
-pref("privacy.window.maxInnerWidth", 1600);
-pref("privacy.window.maxInnerHeight", 900);
+// Set new window size rounding max values
+user_pref("privacy.window.InnerWidth", 1600);
+user_pref("privacy.window.InnerHeight", 900);
+user_pref("privacy.window.maxInnerWidth", 1600);
+user_pref("privacy.window.maxInnerHeight", 900);
 
-// disable mozAddonManager Web API
+// Disable mozAddonManager Web API
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); // [HIDDEN PREF]
 
-//disable showing about:blank page when possible at startup
+// Disable showing about:blank page when possible at startup
 // user_pref("browser.startup.blankWindow", false);
 
-// disable using system colors
-// user_pref("browser.display.use_system_colors", false); // Default: false (Non-Windows)
+// Disable using system colors
+//user_pref("browser.display.use_system_colors", false); // Default: false (Non-Windows)
 
 // allow for chrome/userChrome.css
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
