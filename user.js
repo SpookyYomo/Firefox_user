@@ -96,7 +96,7 @@ user_pref("browser.startup.page",  3);
 
 /* Set NEWTAB page:
  * true = Firefox Home (default), false = blank page */
-user_pref("browser.newtabpage.enabled", false);
+// user_pref("browser.newtabpage.enabled", false);
 user_pref("browser.newtab.preload", false);
 
 // Disable Firefox Home (Activity Stream) telemetry
