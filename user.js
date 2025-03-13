@@ -544,6 +544,12 @@ user_pref("network.trr.mode", 2);
 
 // user_pref("browser.newtabpage.activity-stream.newtabWallpapers.enabled", true);
 
-// to disable Pocket, uncomment the following lines
-user_pref("extensions.pocket.enabled", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+/*********************************************************************
+ * Floorp
+ *********************************************************************/
+
+user_pref("browser.shell.defaultBrowserCheckCount", 3);
+user_pref("floorp.browser.sidebar.enable", false);
+user_pref("floorp.browser.sidebar.is.displayed", false);
+user_pref("floorp.tabsleep.enabled", true)
+user_pref("services.sync.prefs.sync.floorp.browser.note.memos", false);
