@@ -343,7 +343,6 @@ user_pref("media.memory_cache_max_size", 65536);
 user_pref("browser.shell.shortcutFavicons", false);
 
 // Delete temporary files opened from non-Private Browsing windows with external apps
-user_pref("browser.download.start_downloads_in_tmp_dir", true);
 user_pref("browser.helperApps.deleteTempFileOnExit", true);
 
 /*********************************************************************
