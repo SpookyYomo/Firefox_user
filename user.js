@@ -269,6 +269,9 @@ user_pref("network.connectivity-service.enabled", false);
 // Disable location bar making speculative connections
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 
+// Allow modifying search engine
+use_pref("browser.urlbar.update2.engineAliasRefresh", true);
+
 // Disable location bar contextual suggestions
 user_pref("browser.urlbar.quicksuggest.enabled", false);
 user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
@@ -588,3 +591,52 @@ user_pref("network.predictor.enable-prefetch", false);
 
 /** EXPERIMENTAL ***/
 user_pref("layout.css.grid-template-masonry-value.enabled", true);
+
+/****************************************************************************
+ * SECTION: SECUREFOX                                                       *
+****************************************************************************/
+/** TRACKING PROTECTION ***/
+user_pref("browser.uitour.enabled", false);
+user_pref("privacy.globalprivacycontrol.enabled", true);
+
+/** OCSP & CERTS / HPKP ***/
+user_pref("security.OCSP.enabled", 0);
+
+/** SSL / TLS ***/
+user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
+
+/** DISK AVOIDANCE ***/
+user_pref("browser.sessionstore.interval", 60000);
+
+/** SHUTDOWN & SANITIZING ***/
+user_pref("browser.privatebrowsing.resetPBM.enabled", true);
+user_pref("privacy.history.custom", true);
+
+/** SEARCH / URL BAR ***/
+user_pref("browser.urlbar.trimHttps", true);
+user_pref("browser.urlbar.untrimOnUserInteraction.featureGate", true);
+user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
+user_pref("browser.urlbar.groupLabels.enabled", false);
+
+/** PASSWORDS ***/
+user_pref("signon.privateBrowsingCapture.enabled", false);
+user_pref("editor.truncate_user_pastes", false);
+
+/** MIXED CONTENT + CROSS-SITE ***/
+user_pref("security.mixed_content.block_display_content", true);
+
+/** EXTENSIONS ***/
+// user_pref("extensions.enabledScopes", 5); // https://github.com/arkenfox/user.js/issues/898
+
+/** SAFE BROWSING ***/
+user_pref("browser.safebrowsing.downloads.remote.enabled", false);
+
+/** MOZILLA ***/
+user_pref("permissions.default.desktop-notification", 2);
+user_pref("permissions.default.geo", 2); // 2 - Deny: https://support.mozilla.org/en-US/questions/1409365
+user_pref("geo.provider.network.url", "https://beacondb.net/v1/geolocate");
+user_pref("browser.search.update", false);
+user_pref("extensions.getAddons.cache.enabled", false);
+
+/** TELEMETRY ***/
+user_pref("datareporting.usage.uploadEnabled", false);
