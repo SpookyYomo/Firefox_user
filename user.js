@@ -1,11 +1,10 @@
 // Start on second line
 /*********************************************************************
 *
-* Name: user.js | brainfucksec
-* Date: 2024-10-20
-* Version: 0.23.0
+* Name: user.js | brainfucksec | BetterFox
 * Descr.: Mozilla Firefox configuration file: `user.js`
 * URL: https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2
+* URL: https://github.com/yokoffing/Betterfox
 * Maintainer: brainf+ck
 *
 * INFO:
@@ -227,8 +226,8 @@ user_pref("browser.safebrowsing.allowOverride", false);
 user_pref("network.prefetch-next", false);
 
 // Disable DNS prefetching
-// user_pref("network.dns.disablePrefetch", true);
-// user_pref("network.dns.disablePrefetchFromHTTPS", true);
+user_pref("network.dns.disablePrefetch", true);
+user_pref("network.dns.disablePrefetchFromHTTPS", true);
 
 // Disable predictor
 user_pref("network.predictor.enabled", false);
@@ -317,12 +316,8 @@ user_pref("network.auth.subresource-http-auth-allow", 1);
  * DISK CACHE / MEMORY
  *********************************************************************/
 
-// Disable disk cache
-// user_pref("browser.cache.disk.enable", false);
-
 // Disable media cache from writing to disk in Private Browsing
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
-user_pref("media.memory_cache_max_size", 65536);
 
 /* Disable storing extra session data (cookies, POST data, etc.):
  * 0 = everywhere
@@ -558,3 +553,38 @@ user_pref("floorp.browser.sidebar.enable", false);
 user_pref("floorp.browser.sidebar.is.displayed", false);
 user_pref("floorp.tabsleep.enabled", true)
 user_pref("services.sync.prefs.sync.floorp.browser.note.memos", false);
+
+/****************************************************************************
+ * SECTION: FASTFOX                                                         *
+****************************************************************************/
+/** GENERAL ***/
+user_pref("content.notify.interval", 100000);
+
+/** GFX ***/
+user_pref("gfx.canvas.accelerated.cache-size", 512);
+user_pref("gfx.content.skia-font-cache-size", 20);
+
+/** MEMORY CACHE ***/
+user_pref("browser.sessionhistory.max_total_viewers", 4);
+
+/** MEDIA CACHE ***/
+user_pref("media.memory_cache_max_size", 65536);
+user_pref("media.cache_readahead_limit", 7200);
+user_pref("media.cache_resume_threshold", 3600);
+
+/** IMAGE CACHE ***/
+user_pref("image.mem.decode_bytes_at_a_time", 32768);
+
+/** NETWORK ***/
+user_pref("network.http.max-connections", 1800);
+user_pref("network.http.max-persistent-connections-per-server", 10);
+user_pref("network.http.max-urgent-start-excessive-connections-per-host", 5);
+user_pref("network.http.pacing.requests.enabled", false);
+user_pref("network.dnsCacheExpiration", 3600);
+user_pref("network.ssl_tokens_cache_capacity", 10240);
+
+/** SPECULATIVE LOADING ***/
+user_pref("network.predictor.enable-prefetch", false);
+
+/** EXPERIMENTAL ***/
+user_pref("layout.css.grid-template-masonry-value.enabled", true);
