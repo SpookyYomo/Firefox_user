@@ -640,3 +640,15 @@ user_pref("extensions.getAddons.cache.enabled", false);
 
 /** TELEMETRY ***/
 user_pref("datareporting.usage.uploadEnabled", false);
+
+/****************************************************************************
+ * SECTION: PESKYFOX                                                        *
+****************************************************************************/
+/** MOZILLA UI ***/
+user_pref("browser.privatebrowsing.vpnpromourl", "");
+user_pref("browser.shell.checkDefaultBrowser", false);
+user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
+user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
+user_pref("browser.preferences.moreFromMozilla", false);
+user_pref("browser.aboutwelcome.enabled", false);
+user_pref("browser.profiles.enabled", true);
