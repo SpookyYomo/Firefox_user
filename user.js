@@ -269,9 +269,6 @@ user_pref("network.connectivity-service.enabled", false);
 // Disable location bar making speculative connections
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 
-// Allow modifying search engine
-use_pref("browser.urlbar.update2.engineAliasRefresh", true);
-
 // Disable location bar contextual suggestions
 user_pref("browser.urlbar.quicksuggest.enabled", false);
 user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
@@ -585,9 +582,6 @@ user_pref("network.http.max-urgent-start-excessive-connections-per-host", 5);
 user_pref("network.http.pacing.requests.enabled", false);
 user_pref("network.dnsCacheExpiration", 3600);
 user_pref("network.ssl_tokens_cache_capacity", 10240);
-
-/** SPECULATIVE LOADING ***/
-user_pref("network.predictor.enable-prefetch", false);
 
 /** EXPERIMENTAL ***/
 user_pref("layout.css.grid-template-masonry-value.enabled", true);
