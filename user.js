@@ -530,8 +530,8 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
  * DoH
  *********************************************************************/
 
-user_pref("network.trr.custom_uri", "9.9.9.9, 149.112.112.112");
-user_pref("network.trr.uri", "9.9.9.9, 149.112.112.112");
+user_pref("network.trr.custom_uri", "https://adblock.dns.mullvad.net/dns-query");
+user_pref("network.trr.uri", "https://adblock.dns.mullvad.net/dns-query");
 user_pref("network.trr.mode", 2);
 
 // user_pref("browser.newtabpage.activity-stream.newtabWallpapers.enabled", true);
