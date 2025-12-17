@@ -230,8 +230,8 @@ user_pref("network.prefetch-next", false);
 user_pref("network.dns.disablePrefetch", true);
 user_pref("network.dns.disablePrefetchFromHTTPS", true);
 
-// Disable predictor
-user_pref("network.predictor.enabled", false);
+// Disable predictor [Defaults to false in FF144].
+// user_pref("network.predictor.enabled", false);
 
 // Disable link-mouseover opening connection to linked server
 user_pref("network.http.speculative-parallel-limit", 0);
@@ -371,6 +371,7 @@ user_pref("security.remote_settings.crlite_filters.enabled", true);
 
 // Enable HTTPS-Only mode in all windows
 user_pref("dom.security.https_only_mode", true);
+user_pref("dom.security.https_only_mode_error_page_user_suggestions", true);
 
 // Disable sending HTTP request for checking HTTPS support by the server
 user_pref("dom.security.https_only_mode_send_http_background_request", false);
@@ -559,6 +560,7 @@ user_pref("services.sync.prefs.sync.floorp.browser.note.memos", false);
 user_pref("gfx.content.skia-font-cache-size", 32);
 
 /** GFX ***/
+user_pref("gfx.webrender.layer-compositor", true);
 user_pref("gfx.canvas.accelerated.cache-items", 32768);
 user_pref("gfx.canvas.accelerated.cache-size", 4096);
 user_pref("webl.max-size", 16384);
@@ -595,10 +597,11 @@ user_pref("network.ssl_tokens_cache_capacity", 10240);
 /** TRACKING PROTECTION ***/
 user_pref("browser.uitour.enabled", false);
 user_pref("privacy.globalprivacycontrol.enabled", true);
-user_pref("privacy.trackingprotection.allow_list.baseline.enabled", true);
+// user_pref("privacy.trackingprotection.allow_list.baseline.enabled", true); [Default FF146?]
 
 /** OCSP & CERTS / HPKP ***/
 user_pref("security.OCSP.enabled", 0);
+user_pref("privacy.antitracking.isolateContentScriptResources", true)
 user_pref("security.csp.reporting.enabled", false);
 
 /** SSL / TLS ***/
@@ -621,9 +624,6 @@ user_pref("browser.urlbar.groupLabels.enabled", false);
 user_pref("signon.privateBrowsingCapture.enabled", false);
 user_pref("editor.truncate_user_pastes", false);
 
-/** MIXED CONTENT + CROSS-SITE ***/
-user_pref("security.mixed_content.block_display_content", true);
-
 /** EXTENSIONS ***/
 // user_pref("extensions.enabledScopes", 5); // https://github.com/arkenfox/user.js/issues/898
 
@@ -644,7 +644,6 @@ user_pref("datareporting.usage.uploadEnabled", false);
  * SECTION: PESKYFOX                                                        *
 ****************************************************************************/
 /** MOZILLA UI ***/
-user_pref("browser.privatebrowsing.vpnpromourl", "");
 user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
