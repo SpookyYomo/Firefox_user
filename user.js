@@ -263,6 +263,17 @@ user_pref("network.captive-portal-service.enabled", false);
 // Disable network connections checks
 user_pref("network.connectivity-service.enabled", false);
 
+/****************************************************************************
+ * SECTION: DOM (DOCUMENT OBJECT MODEL)                                     *
+****************************************************************************/
+// PREF: prevent scripts from moving and resizing open windows
+user_pref("dom.disable_window_move_resize", true);
+
+// PREF: disable beforeunload event
+// [WHY] The method is commonly abused by scam and spyware sites.
+// [1] https://developer.mozilla.org/docs/Web/API/Window/beforeunload_event
+//user_pref("dom.disable_beforeunload", true);
+
 /*********************************************************************
  * SEARCH BAR: SUGGESTIONS, AUTOFILL, FORMS
  *********************************************************************/
@@ -561,8 +572,8 @@ user_pref("gfx.content.skia-font-cache-size", 32);
 
 /** GFX ***/
 user_pref("gfx.webrender.layer-compositor", true);
-user_pref("gfx.canvas.accelerated.cache-items", 32768);
-user_pref("gfx.canvas.accelerated.cache-size", 4096);
+user_pref("gfx.canvas.accelerated.cache-items", 4096);
+user_pref("gfx.canvas.accelerated.cache-size", 512);
 user_pref("webl.max-size", 16384);
 
 /** MEMORY CACHE ***/
@@ -650,8 +661,10 @@ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", 
 user_pref("browser.preferences.moreFromMozilla", false);
 user_pref("browser.aboutwelcome.enabled", false);
 user_pref("browser.profiles.enabled", true);
+user_pref("browser.tabs.splitView.enabled", true);
 
 /** AI ***/
+user_pref("browser.ai.control.default", "blocked");
 user_pref("browser.ml.enable", false);
 user_pref("browser.ml.chat.enabled", false);
 user_pref("browser.ml.chat.menu", false);
