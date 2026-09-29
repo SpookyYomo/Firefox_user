@@ -662,6 +662,7 @@ user_pref("browser.preferences.moreFromMozilla", false);
 user_pref("browser.aboutwelcome.enabled", false);
 user_pref("browser.profiles.enabled", true);
 user_pref("browser.tabs.splitView.enabled", true);
+user_pref("browser.nova.enabled", false);
 
 /** AI ***/
 user_pref("browser.ai.control.default", "blocked");
